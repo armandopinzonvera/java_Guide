@@ -23,7 +23,7 @@
     <!-- bg-primary da color a la barra de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Configuracion</span>
+            <span class="d-block d-lg-none">UML</span>
 
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -48,7 +48,7 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">
 
-                <h2 class="my-4">Configuracion
+                <h2 class="my-4">UML
 
                 </h2>
 
@@ -62,33 +62,64 @@
                 <div class="card mb-4">
 
                     <div class="card-body">
-                        <h3 class="card-title">Eclipse JEE </h3>
+                        <h3 class="card-title">Diagrama </h3>
 
                         <p class="card-text">
-                            Para trabajar con el framework y poder hacer enlace con servidores, primero debemos tener
-                            descargado el <b>JDK</b>, el cual contiene la máquina virtual <b>JRE</b>.<br>
-                            Además debemos tener instalado un servidor Java, el cual será <b>Tomcat</b>, para ello en la
-                            página de descarga buscamos el instalador: <b>32-bit/64-bit Windows Service Installer</b>,
-                            hacemos el proceso de instalación normal, seleccionando todos los ITEMs, en choose
-                            components, revisando que incluya <b>service startup</b>. además revisar que en el
-                            directorio apunte a la maquina virtual, jre; si no se busca en los tres puntos<br>
-                            Por otro lado trabajar con la versión de <a
-                                href="ttps://www.eclipse.org/downloads/packages/" target="blank">Eclipse enterprice
-                                edition : <a href="ttps://www.eclipse.org/downloads/packages/" target="blank">Eclipse
-                                    IDE for Enterprise Java Developers</a>
-
+                            Para realizar el diagrama, un alternativa es emplear la página <a
+                                href="https://plantuml.com/es/" target="blank"><b>PlantUML</b></a>, en la opción de
+                            /<b>Online Server</b>/ nos abre una ventana para introducir código con el cual construir el
+                            diagrama<br>
+                            Este código va entre, una etiqueta de inicio y de final: <b>@startuml</b> y <b>@enduml</b>,
+                            consiste en primero declarar las clases, con la palabra reservada <b>class</b>, el
+                            <b>nombre</b>, llaves <b>{}</b>, y dentro de las llaves, declaramos los <b>métodos()</b> y
+                            <b>variables</b>.<br>
+                            Posteriormente indicamos la relación entre las clases con los nombres anteriormente
+                            utilizados, <b>guiones</b> y signo de <b>mayorQue</b>.
                         </p>
 
-
-                        <p class="card-text">Cuando se habrá eclipse, se debe ver en la ventana inferior como se indica el servidor por <b>Tomcat</b></p>
-                        <img class="card-img-top" src="IMG/CONFIGURACION/jee1.png" alt="Card image cap">
+                        <p class="card-text"></p>
+                        <img class="card-img-top" src="IMG/UML/um1.png" alt="Card image cap">
                         <p></p>
-                        <p class="card-text">En el panel de control, se puede ver el servicio de TomCat, entramos a: panel de control/Herramientas administrativas/ver servicios locales y buscamos: Apache Tomcat, si damos clic, en la parte superior izquierda podemos Detener o Reiniciar servicio</p>
-                        <img class="card-img-top" src="IMG/CONFIGURACION/jee2.png" alt="Card image cap">
+
+                        <p class="card-text">Dentro de las clases las variables se declaran como: tipo de dato y nombre,
+                            mientras los métodos con el nombre seguido de paréntesis</p>
+                        <pre class="pre">
+                            class VistaTransecto{
+                                TextView longitud, latitud
+                                onCreate()
+                                conectarExtras()
+                                putValueTextView(double latitude, double longitude)
+                                stop()
+                                conectarSQLite()
+                                hilo()
+                                onBackPressed()
+                                }
+                        </pre>
+
+
+                        <p></p>
+                        <p class="card-text">Tenemos tres tipos de relaciones entre las clases:<br>
+                            <b>Composición</b>: la clase que lleva el diamante lleno, no funciona sin la clase del otro
+                            extremo, como ejemplo: computador-cpu, se indica cómo <b>--*</b><br>
+                            <b>Agregación</b>: la clase que lleva el diamante vacío, tiene la del otro lado, pero no
+                            depende de ella, puede funcionar sin esa, se indica como <b>--o</b><br>
+                            <b>Extensión</b>: cuando hereda, se indica como <b>--|></b>
+                        </p>
+                        <pre>
+Iniciar-->VistaTransecto
+Iniciar--*Service_Location
+VistaTransecto*--Service_Location
+Service_Location--mapFragment
+mapFragment*--VistaTransecto
+VistaTransecto--ConexionSQLite
+UtilidadesSQLite--ConexionSQLite
+                            </pre>
+
+                        <img class="card-img-top" src="IMG/UML/um2.png" alt="Card image cap">
 
                     </div>
                     <div class="card-footer text-muted">
-                        Publicado en Septiembre 14, 2020 by
+                        Publicado en Septiembre 16, 2020 by
                         <a href="#">Armando Pinzon</a>
                     </div>
                 </div>
@@ -216,7 +247,8 @@
                 <div class="card my-4">
                     <h5 class="card-header">Guia JAVA</h5>
                     <div class="card-body">
-                        Este Blog aportar con instructivos para procedimientos comunes en Java, enfocado en servidores y manejo de BBDD relacionales
+                        Este Blog aportar con instructivos para procedimientos comunes en Java, enfocado en servidores y
+                        manejo de BBDD relacionales
                     </div>
                 </div>
 
