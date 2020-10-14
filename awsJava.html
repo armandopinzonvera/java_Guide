@@ -23,7 +23,7 @@
     <!-- bg-primary da color a la barra de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Configuracion</span>
+            <span class="d-block d-lg-none">AWSjava</span>
 
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -49,7 +49,7 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">
 
-                <h2 class="my-4">Configuracion
+                <h2 class="my-4">AWS
 
                 </h2>
 
@@ -63,33 +63,78 @@
                 <div class="card mb-4">
 
                     <div class="card-body">
-                        <h3 class="card-title">Eclipse JEE </h3>
+                        <h3 class="card-title">Instalar AWStoolkit eclipse</h3>
 
                         <p class="card-text">
-                            Para trabajar con el framework y poder hacer enlace con servidores, primero debemos tener
-                            descargado el <b>JDK</b>, el cual contiene la máquina virtual <b>JRE</b>.<br>
-                            Además debemos tener instalado un servidor Java, el cual será <b>Tomcat</b>, para ello en la
-                            página de descarga buscamos el instalador: <b>32-bit/64-bit Windows Service Installer</b>,
-                            hacemos el proceso de instalación normal, seleccionando todos los ITEMs, en choose
-                            components, revisando que incluya <b>service startup</b>. además revisar que en el
-                            directorio apunte a la maquina virtual, jre; si no se busca en los tres puntos<br>
-                            Por otro lado trabajar con la versión de <a
-                                href="ttps://www.eclipse.org/downloads/packages/" target="blank">Eclipse enterprice
-                                edition : <a href="ttps://www.eclipse.org/downloads/packages/" target="blank">Eclipse
-                                    IDE for Enterprise Java Developers</a>
+
+                            lo primero es estar seguro de tener la ultima version del eclipse,
+                            para ello, en Eclipse, primero vamos a <b>Help/About Eclipse IDE/ </b>
+                            con lo cual se nos muestra una ventana con las caracteristica del
+                            software instalado.<br>
+                            luego vamos a <b>Help/Check for Updates</b> y actualizamos lo que
+                            nos indique el IDE.<br>
+                            Posteriormente nos dirigimos a la ruta <b>Help/Install new Software/</b>
+                            En la nueva ventana que se abre, en el buscador, indicamos la pagina
+                            de descarga <a href="https://aws.amazon.com/es/eclipse/"
+                                target="blank"><b>https://aws.amazon.com/eclipse </b></a> y damos click
+                            en el boton <b>add</b>, se abrira una nueva ventana donde nos pide
+                            un nombre para esa URL, le colocamos AWS.
+                            Seleccionamos los archivos que se presentan y procedemos con el boton next.
 
                         </p>
 
-
-                        <p class="card-text">Cuando se habrá eclipse, se debe ver en la ventana inferior como se indica el servidor por <b>Tomcat</b></p>
-                        <img class="card-img-top" src="IMG/CONFIGURACION/jee1.png" alt="Card image cap">
+                        <p class="card-text"></p>
+                        <img class="card-img-top" src="IMG/AWS/aw1.png" alt="Card image cap">
                         <p></p>
-                        <p class="card-text">En el panel de control, se puede ver el servicio de TomCat, entramos a: panel de control/Herramientas administrativas/ver servicios locales y buscamos: Apache Tomcat, si damos clic, en la parte superior izquierda podemos Detener o Reiniciar servicio</p>
-                        <img class="card-img-top" src="IMG/CONFIGURACION/jee2.png" alt="Card image cap">
+
+                        <p class="card-text">Posteriomente nos abre otra ventana en donde nos indica lños software a
+                            Instalar
+                            la ceptacion de licencias y esperamos que el proceso termine, con lo cual nos pide reiniciar
+                            el IDE
+                        </p>
+                        <p class="card-text"></p>
+                        <img class="card-img-top" src="IMG/AWS/aw2.png" alt="Card image cap">
+                        <p></p>
+                        <p class="card-text">Cuando reinicie Eclipse nos pedira las claves de acceso de AWS
+                        </p>
+                        <p></p>
+                        <p class="card-text"></p>
+                        <img class="card-img-top" src="IMG/AWS/aw3.png" alt="Card image cap">
+                        <p class="card-text">Ahora debemos proporcionar el <b>Access Key ID</b> y 
+                            <b>Secret Access Key</b>, para obtener entramos a nuestra cuenta de AWS
+                            como usuario IAM, en la esquina superior derecha damos clic en la pestaña de 
+                            usuario y seleccionamos mis credenciales de seguridad
+                        </p>
+                        <p class="card-text"></p>
+                        <img class="card-img-top" src="IMG/AWS/aw4.png" alt="Card image cap">
+
+                        <p></p>
+                        <p class="card-text"></p>
+                      
+                        <p class="card-text">damos clic en el boton <b>Crear una clave de acceso</b>, no podemos
+                            tener mas de dos si la cuenta es gratuita; esta nos proporciona
+                            un ID de acceso y una clave de acceso secreta, que solo lo muestra una vez,
+                            en la ventana que se crea, por lo cual debemos copiarla en un archivo para 
+                            poder usarla.
+                        </p>
+                        <p class="card-text"></p>
+                        <img class="card-img-top" src="IMG/AWS/aw5.png" alt="Card image cap">
+                        <p class="card-text"></p>
+                        <img class="card-img-top" src="IMG/AWS/aw6.png" alt="Card image cap">
+                        <p></p>
+                        <p class="card-text"></p>
+                      
+                        <p class="card-text">Cuando colocamos las claves en el eclipse, se despiega una ventana
+                            en donde se ven los servicio ofrecidos por AWS
+                        </p>
+                        <p class="card-text"></p>
+                        <img class="card-img-top" src="IMG/AWS/aw7.png" alt="Card image cap">
+                        <p></p>
+
 
                     </div>
                     <div class="card-footer text-muted">
-                        Publicado en Septiembre 14, 2020 by
+                        Publicado en octubre 14, 2020 by
                         <a href="#">Armando Pinzon</a>
                     </div>
                 </div>
@@ -217,7 +262,8 @@
                 <div class="card my-4">
                     <h5 class="card-header">Guia JAVA</h5>
                     <div class="card-body">
-                        Este Blog aportar con instructivos para procedimientos comunes en Java, enfocado en servidores y manejo de BBDD relacionales
+                        Este Blog aportar con instructivos para procedimientos comunes en Java, enfocado en servidores y
+                        manejo de BBDD relacionales
                     </div>
                 </div>
 
